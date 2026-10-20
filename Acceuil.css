@@ -1,0 +1,131 @@
+body{
+   margin: 0;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url("Images/forêt.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+.nav1 {
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  z-index: 100;
+}
+
+.div1 ul {
+  display: flex;
+  list-style: none;           /* Ceci enlève les points */
+  margin: 0;
+  padding: 0;
+  gap: 40px;                 /* Espace entre les mots */
+}
+
+.div1 li a {
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease;
+}
+
+.div1 li a:hover {
+  color: #00AABB;
+  transform: translateY(-2px);
+}
+
+/* Optionnel : petit effet souligné au survol */
+.div1 li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+.div1 li a:hover::after {
+  width: 100%;
+}
+
+/* Fond léger (comme sur beaucoup de sites) */
+.div1 {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px 28px;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+}
+
+h1{
+    text-align:center;
+    padding:40px 0;
+    color: #00AABB;
+}
+
+.bloc{
+    width:90%;
+    max-width:1200px;
+
+    margin:50px auto;
+
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+/* Image à gauche, texte à droite */
+.gauche{
+    flex-direction:row;
+}
+
+/* Image à droite, texte à gauche */
+.droite{
+    flex-direction:row-reverse;
+}
+
+.image,.texte{
+    flex:1;
+}
+
+.image img{
+    width:100%;
+    height:auto;
+
+    border-radius:15px;
+
+    display:block;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.texte{
+    background-color: #0FF;
+    border-radius: 5px;
+}
+
+.texte h2{
+    margin-bottom:15px;
+    color:#1f8a3d;
+}
+
+.texte p{
+    text-align:justify;
+    line-height:1.8;
+    font-size:1.1rem;
+    color: #01C;
+}

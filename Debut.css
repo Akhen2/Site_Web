@@ -1,0 +1,76 @@
+body{
+  background-image: url(Images/forêt.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.nav1 {
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  z-index: 100;
+}
+
+.div1 ul {
+  display: flex;
+  list-style: none;           /* ← Ceci enlève les points */
+  margin: 0;
+  padding: 0;
+  gap: 40px;                  /* Espace entre les mots */
+}
+
+.div1 li a {
+  color: white;
+  text-decoration: none;
+  font-size: /*1.08rem*/ 50px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease;
+}
+
+.div1 li a:hover {
+  color: #00AABB;
+  transform: translateY(-2px);
+}
+
+/* Optionnel : petit effet souligné au survol */
+.div1 li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+.div1 li a:hover::after {
+  width: 100%;
+}
+
+/* Fond léger (comme sur beaucoup de sites) */
+.div1 {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px 28px;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+}
+
+.position{
+
+    position: absolute;
+    top: 140px;
+    left: 85px;
+    color: #ABCCFF;
+    /*border: 10px solid black;*/
+}
+
+p{
+    position: absolute;
+    top: 400px;
+    right: 250px;
+    color: #ADE;
+    font-size: 30px;
+    text-align: center;
+}

@@ -1,0 +1,130 @@
+body{
+  margin: 0;
+  min-height: 100vh;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("Images/forêt.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nav1 {
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  z-index: 100;
+}
+
+.div1 ul {
+  display: flex;
+  list-style: none;           /* ← Ceci enlève les points */
+  margin: 0;
+  padding: 0;
+  gap: 40px;                 /* Espace entre les mots */
+}
+
+.div1 li a {
+  color: white;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease;
+}
+
+.div1 li a:hover {
+  color: #00AABB;
+  transform: translateY(-2px);
+}
+
+/* Optionnel : petit effet souligné au survol */
+.div1 li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+.div1 li a:hover::after {
+  width: 100%;
+}
+
+/* Fond léger (comme sur beaucoup de sites) */
+.div1 {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px 28px;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+}
+
+h3{
+  text-align: center;
+  text-decoration: underline;
+}
+
+.bloc{
+  width: 100%;
+  padding: 50px;
+  display: flex;
+}
+
+.bloc.gauche{
+  justify-content: flex-start;
+}
+
+.bloc.droite{
+  justify-content: flex-end;
+}
+
+.image-container{
+  position: relative;
+  width: 500px;
+}
+
+.image-container img{
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Cadre texte */
+.texte-cache{
+    position: absolute;
+    top: 50%;
+    width: 350px;
+
+    background-color: #2e8b57;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.4s ease;
+}
+
+/* Texte à droite de l'image */
+.texte-cache.droite{
+    left: calc(100% + 20px);
+}
+
+/* Texte à gauche de l'image */
+.texte-cache.gauche{
+    right: calc(100% + 20px);
+}
+
+/* Apparition uniquement au survol de l'image */
+.image-container:hover .texte-cache{
+    opacity: 1;
+    visibility: visible;
+}
